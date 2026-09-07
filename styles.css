@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #FAF3E7;  /* ensure the color fills the entire page */
+}
+.library {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 30px 100px;
+}
+/* button styles */
+.library button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.library > button {
+    padding: 0.7rem 1.5rem;
+    font-size: 20px;
+    background-color: #2E5D5A;
+    color: #FFFFFF;
+}
+.delete, .close {
+    background-color: #FADADD;
+    color: #B3542E;
+    padding: 0.5rem 1rem;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+.save, .edit {
+    background-color: #2E5D5A;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    flex: 2; /* Add and edit button takes up more space */
+}
+.actions > div {  /* style the edit and delete button */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.list {
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    table-layout: fixed; /* forces columns to respect fixed widths, ignoring content length */
+    text-align: left;
+    overflow: hidden;
+    border-collapse: collapse; /* removes the gap between cells/rows */
+}
+.list thead {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.list th, .list td {
+    overflow-wrap: break-word; /* forces long unbroken text to wrap onto a new line */
+    padding: 1rem 2rem;
+}
+.list tr:nth-child(even) {
+    background-color: #FBF8F2;
+}
+dialog {
+    margin: auto;   /* centers dialog */
+    border: none;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.book-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.field > input, .field > select {
+    padding: 0.5rem 0.7rem;
+    border: 2px solid #D8D8D8;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+.field > input:focus {
+    outline: none;
+    border-color: #2E5D5A; /* teal accent on focus */
+}
